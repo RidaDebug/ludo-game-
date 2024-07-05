@@ -1,0 +1,266 @@
+@import "dice.css";
+
+body {
+    margin: 0px;
+    font-family: Serif;
+    color: rgba(255, 255, 255, 255);
+    font-weight: bold;
+    background-size: 56.57px 56.57px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(8, 21, 36, 1) 0%, rgba(117, 22, 137, 1) 40%, rgba(255, 121, 169, 1) 100%);
+    background-image: url("https://i.pinimg.com/564x/a5/b3/be/a5b3bebd68cf995114b147dfd21f8f8e.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+.mainframe {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ludoboard {
+    background-color: rgba(255, 255, 255, 0.418);
+    border: 0.5px solid rgba(0, 0, 0, 0.452);
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+}
+
+.diceboard {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-between;
+}
+
+.mdiceboard {
+    display: none;
+}
+
+.diceboard .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centerbox {
+    grid-column: 7/10;
+    grid-row: 7/10;
+    width: 0px;
+    height: 0px;
+    border-top: 60px solid #0dcf4e;
+    border-bottom: 60px solid #04c2c9;
+    border-left: 60px solid #fee503;
+    border-right: 60px solid #fe0303;
+}
+
+.red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fee5038f;
+    border: 0.5px solid #a79f5d;
+    grid-column: 1/7;
+    grid-row: 1/7;
+}
+
+.redsafe {
+    background-color: #fee5038f;
+    border: 0.5px solid #99935d;
+}
+
+.playerzone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    overflow: hidden;
+}
+
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.9;
+    width: 50px;
+    height: 50px;
+}
+
+.green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00e3268a;
+    border: 0.5px solid #039634;
+    grid-column: 10/16;
+    grid-row: 1/7;
+}
+
+.greensafe {
+    background-color: #00e3268a;
+    border: 0.5px solid #039634;
+}
+
+.step {
+    border: 0.5px solid #b3b3b3;
+}
+
+.blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0cabb1b7;
+    border: 0.5px solid #027478;
+    grid-column: 1/7;
+    grid-row: 10/16;
+}
+
+.bluesafe {
+    background-color: #0cabb1b7;
+    border: 0.5px solid #027478;
+}
+
+.yellow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fe030391;
+    border: 0.5px solid #7c4242;
+    grid-column: 10/16;
+    grid-row: 10/16;
+}
+
+.yellowsafe {
+    background-color: #fe030391;
+    border: 0.5px solid #cf4e4e;
+}
+
+.astep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.y {
+    color: #FEE303;
+}
+
+.g {
+    color: #00e34c;
+}
+
+.b {
+    color: #04c3c9;
+}
+
+.r {
+    color: #FE0303;
+}
+
+
+
+.rstop {
+    background-image: linear-gradient(45deg, #FEE303 25%, #edffbd 25%, #edffbd 50%, #FEE303 50%, #FEE303 75%, #edffbd 75%, #edffbd 100%);
+    background-size: 15px 10px;
+}
+
+.gstop {
+    background-image: linear-gradient(45deg, #00e34c 25%, #b0ffcc 25%, #b0ffcc 50%, #00e34c 50%, #00e34c 75%, #b0ffcc 75%, #b0ffcc 100%);
+    background-size: 15px 10px;
+}
+
+.ystop {
+    background-image: linear-gradient(45deg, #FE0303 25%, #d3b099 25%, #d6a183 50%, #FE0303 50%, #FE0303 75%, #ecc3be 75%, #ddb396 100%);
+    background-size: 15px 10px;
+}
+
+.bstop {
+    background-image: linear-gradient(45deg, #04c3c9 25%, #bdfdff 25%, #bdfdff 50%, #04c3c9 50%, #04c3c9 75%, #bdfdff 75%, #bdfdff 100%);
+    background-size: 15px 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .fixed {
+        position: fixed;
+    }
+
+    .mainframe {
+        flex-direction: column;
+    }
+
+    .diceboard {
+        display: none;
+    }
+
+
+    .mdiceboard {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        margin: 10px 0px;
+    }
+
+    .mdiceboard .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .ludoboard {
+        background-color: rgba(255, 255, 255, 0.466);
+        border: 0.5px solid rgba(0, 0, 0, 0.377);
+        width: 100vw;
+        height: 100vw;
+        display: grid;
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+    }
+
+    .centerbox {
+        height: 100%;
+        width: 100%;
+        grid-column: 7/10;
+        grid-row: 7/10;
+        /*   background-color: aqua;*/
+        background-image: url(center.jpg);
+        background-size: cover;
+        border: 0px solid red;
+    }
+
+    .playerzone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+        overflow: hidden;
+    }
+
+    .player {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        /* background-color: white; */
+        opacity: 0.9;
+        width: 1fr;
+        height: 1fr;
+    }
+}
